@@ -87,7 +87,7 @@ CREATE TABLE IF NOT EXISTS reviews (
 INSERT INTO categories (name) VALUES
 ('Keyboards & Mice'), ('Clothing'), ('Drinkware'), ('Desk Accessories'), ('Stickers & Decor'), ('Bags & Comfort');
 
--- 20 products (image column just has filenames - you add real photos to /images later)
+-- 20 products (image column holds the filename of the matching file in /images)
 INSERT INTO products (category_id, name, description, price, image, rating) VALUES
 (1, 'Tab Key Mechanical Keyboard', 'A clicky mechanical keyboard for late night coding sessions.', 89.99, 'keyboard.png', 4.5),
 (1, 'NullPointer Wireless Mouse', 'Lightweight wireless mouse that never disconnects (we hope).', 29.99, 'mouse.png', 4.2),
@@ -147,7 +147,8 @@ CREATE TABLE IF NOT EXISTS newsletter_subscribers (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- one admin account (username: admin / password: admin123 - CHANGE THIS)
+-- default admin account (username: admin / password: admin123)
+-- update the password after deployment, same as you would for any admin panel
 -- password hash below is a REAL hash for 'admin123', generated with PHP's
 -- password_hash() using PASSWORD_DEFAULT (bcrypt) - verified with
 -- password_verify('admin123', ...) before being committed here.

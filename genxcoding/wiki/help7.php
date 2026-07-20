@@ -19,9 +19,8 @@ include '../includes/header.php';
 </nav>
 
 <h2 id="technical-docs">7. Technical Documentation</h2>
-<p>This page is written for developers, instructors, or anyone evaluating the code, rather than for
-regular shoppers. It documents how the site is built: the database design, the front-end architecture,
-and where to find comments in the code itself.</p>
+<p>This page is written for developers rather than regular shoppers. It documents how the site is
+built: the database design, the front-end architecture, and where to find comments in the code itself.</p>
 
 <h3 id="site-architecture">Site Architecture</h3>
 <p>The site is organized like this:</p>

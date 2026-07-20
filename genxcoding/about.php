@@ -1,8 +1,7 @@
 <?php
-// about.php - the business case / "what is this store" page (satisfies the
-// assignment's requirement for a paragraph describing the catalogue) plus
-// two brand/marketing videos. Mostly static content, so there isn't much
-// PHP logic here beyond setting up the shared header/footer.
+// about.php - the company/store description page, plus two brand videos.
+// Mostly static content, so there isn't much PHP logic here beyond setting
+// up the shared header/footer.
 require_once 'config.php';
 $pageTitle = "About";
 $pageDescription = "Learn about GenX Coding, an online store for developer merchandise and desk gear.";

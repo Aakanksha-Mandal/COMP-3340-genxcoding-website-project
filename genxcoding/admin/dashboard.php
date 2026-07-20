@@ -31,8 +31,7 @@ include 'includes/header.php';
     </div>
 </div>
 
-<!-- simple bar chart using plain divs + css, no library needed, satisfies
-     the "data visualization" requirement without adding a JS dependency -->
+<!-- simple bar chart using plain divs + css - lightweight, no charting library needed -->
 <h2>Orders vs Products vs Users</h2>
 <div class="chart">
     <div class="bar" style="height: <?php echo $product_count * 10; ?>px;">Products</div>

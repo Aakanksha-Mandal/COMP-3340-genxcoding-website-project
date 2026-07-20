@@ -2,12 +2,12 @@
 // header.php - included at the top of every page.
 //
 // NOTE ON TEMPLATES: the site-wide look (Regular / Dark / Retro) is picked
-// by the ADMIN in admin/templates.php, not by each visitor - that's what the
-// assignment actually asks for ("admin interface: enable switching of at
-// least 3 templates"). We read the current choice out of the site_settings
-// table below. If that table/row doesn't exist yet (e.g. you're running an
-// older copy of database.sql), we just fall back to "regular" so the site
-// doesn't break.
+// by the ADMIN in admin/templates.php, not by each visitor - this keeps the
+// storefront's appearance consistent and intentional at any given moment
+// rather than different for every shopper. We read the current choice out
+// of the site_settings table below. If that table/row doesn't exist yet
+// (e.g. you're running an older copy of database.sql), we just fall back
+// to "regular" so the site doesn't break.
 
 $theme = 'regular'; // safe fallback
 $settings_check = @mysqli_query($conn, "SELECT setting_value FROM site_settings WHERE setting_name = 'site_template' LIMIT 1");
@@ -29,10 +29,10 @@ if (!isset($pageKeywords)) {
     $pageKeywords = "coding merch, programmer gifts, developer store, mechanical keyboard, coder hoodie";
 }
 
-// CONTEXT-SENSITIVE HELP: each page can set $helpLink before including this
-// file to point the "Help" nav link at the specific wiki page/section that's
-// actually relevant to what the visitor is doing (e.g. checkout.php links
-// straight to the checkout instructions instead of the wiki's front page).
+// Each page can set $helpLink before including this file to point the
+// "Help" nav link at the specific wiki page/section that's actually
+// relevant to what the visitor is doing (e.g. checkout.php links straight
+// to the checkout instructions instead of the wiki's front page).
 if (!isset($helpLink)) {
     $helpLink = 'wiki/help1.php';
 }

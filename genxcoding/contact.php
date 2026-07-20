@@ -1,6 +1,5 @@
 <?php
-// contact.php - a simple contact form plus an embedded interactive map
-// (the map satisfies the "interactive map" multimedia requirement).
+// contact.php - a simple contact form plus an embedded interactive map.
 require_once 'config.php';
 $pageTitle = "Contact";
 $pageDescription = "Get in touch with GenX Coding - questions, support, and store location.";
@@ -8,10 +7,10 @@ $pageKeywords = "contact GenX Coding, customer support, developer merch help";
 $helpLink = 'wiki/help1.php';
 include 'includes/header.php';
 
-// there's no outgoing email server configured on most student hosting
-// (myweb often blocks PHP's mail() function), so messages are appended to
-// a local text file instead. Good enough for a class project - a real
-// deployment would swap this for a proper mail library or a database table.
+// there's no outgoing email server configured on this host (many shared
+// hosting plans block PHP's mail() function), so messages are appended to
+// a local text file instead. A production deployment would swap this for
+// a proper mail library or a database table.
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = htmlspecialchars($_POST['name']);
     $msg = htmlspecialchars($_POST['message']);
@@ -41,12 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </form>
 
 <h2>Visit Us</h2>
-<!-- interactive map requirement - using an embedded google map iframe, no API key needed for basic embed -->
+<!-- embedded map, no API key needed for a basic embed like this -->
 <iframe
     width="100%" height="400"
     style="border:1px solid var(--card-border); border-radius:6px; max-width:700px;"
     loading="lazy"
-    src="https://maps.google.com/maps?q=University%20of%20Windsor&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    src="https://maps.google.com/maps?q=Toronto%2C%20Ontario&t=&z=12&ie=UTF8&iwloc=&output=embed">
 </iframe>
 </div>
 

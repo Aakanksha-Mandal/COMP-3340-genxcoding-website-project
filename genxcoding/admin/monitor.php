@@ -1,8 +1,7 @@
 <?php
 // admin/monitor.php - a quick health check for the site's core features.
-// This satisfies the "monitoring page reporting online/offline status"
-// requirement - it's intentionally simple (no external monitoring service),
-// just a handful of checks run fresh on every page load.
+// Intentionally simple (no external monitoring service) - just a handful
+// of checks run fresh on every page load.
 require_once '../config.php';
 if (!isset($_SESSION['admin_id'])) { header("Location: login.php"); exit; }
 

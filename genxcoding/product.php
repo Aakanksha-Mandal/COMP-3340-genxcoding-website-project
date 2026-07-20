@@ -1,7 +1,7 @@
 <?php
 // product.php - single product detail page. Handles 3 things: showing the
-// product + its options, the "add to cart" form (DYNAMIC FORM #1), and the
-// star-rating review form below it.
+// product + its options, the "add to cart" form, and the star-rating
+// review form below it.
 require_once 'config.php';
 require_once 'includes/helpers.php';
 
@@ -86,9 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review'])) {
         <p class="price"><?php echo render_price($product); ?></p>
         <p>Rating: <?php echo $product['rating']; ?> / 5</p>
 
-        <!-- DYNAMIC FORM #1 (one of the two required dynamic forms).
-             Has an id so main.js can optionally submit it via AJAX for a
-             logged-in user, with a normal fallback if JS is off. -->
+        <!-- add-to-cart form. Has an id so main.js can optionally submit it via
+             AJAX for a logged-in user, with a normal fallback if JS is off. -->
         <form method="post" id="add-to-cart-form" data-logged-in="<?php echo isset($_SESSION['user_id']) ? '1' : '0'; ?>">
             <input type="hidden" name="product_id" value="<?php echo $id; ?>">
             <?php foreach ($options as $optName => $values) { ?>

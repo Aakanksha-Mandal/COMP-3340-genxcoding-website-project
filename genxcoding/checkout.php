@@ -26,7 +26,7 @@ foreach ($_SESSION['cart'] as $item) {
     $total += $item['price'] * $item['qty'];
 }
 
-// DYNAMIC FORM #2 - checkout / shipping form
+// shipping / payment form - creates the order once submitted
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $uid = $_SESSION['user_id'];
 
