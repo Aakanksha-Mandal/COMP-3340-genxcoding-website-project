@@ -1,9 +1,0 @@
-# config.php holds your real database credentials (host/user/password) - it
-# should never be committed to GitHub. Use config.example.php as the template
-# instead; anyone setting this project up copies it to config.php locally
-# and fills in their own real values. See config.example.php for details.
-config.php
-
-# OS/editor junk
-.DS_Store
-Thumbs.db
