@@ -1,0 +1,51 @@
+/* ===============================================
+   GenX Coding - "Retro" template
+   Chosen by the admin. Old terminal/CRT look - dark brown-black background,
+   amber monospace text, double borders instead of shadows, sharp corners
+   instead of rounded ones. This is meant to look genuinely different in
+   layout details, not just a recolor.
+   =============================================== */
+@import url('regular.css');
+
+:root {
+    --bg: #241f18;
+    --header-bg: #100d09;
+    --header-text: #e8c170;
+    --accent: #e8c170;
+    --accent-hover: #f5d68a;
+    --card-bg: #2c2619;
+    --card-border: #6b5a35;
+    --text: #e8c170;
+    --text-muted: #b39a5f;
+    --table-border: #6b5a35;
+    --shadow: rgba(0, 0, 0, 0.5);
+    --radius: 0px;
+}
+
+body { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+.site-header { border-bottom: 3px double var(--accent); }
+
+.btn {
+    border: 2px solid var(--accent);
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--accent);
+}
+.btn:hover { background-color: var(--accent); color: var(--header-bg); }
+
+.auth-links .btn-nav {
+    border-radius: 0;
+    border: 1px solid var(--header-bg);
+}
+
+.product-card {
+    border: 2px dashed var(--card-border);
+    border-radius: 0;
+}
+
+.product-detail img { border-radius: 0; border: 2px solid var(--card-border); }
+
+.bar { border-radius: 0; }
+
+input, select, textarea { border-radius: 0; }

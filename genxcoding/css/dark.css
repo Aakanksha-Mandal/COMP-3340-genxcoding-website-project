@@ -1,0 +1,24 @@
+/* ===============================================
+   GenX Coding - "Dark" template
+   Chosen by the admin in admin/templates.php - this is a fixed, always-dark
+   palette (it does not change based on visitor OS settings, unlike the
+   Regular template - the admin already picked "dark" on purpose here).
+   Reuses all the layout rules from regular.css, just swaps the color variables.
+   =============================================== */
+@import url('regular.css');
+
+:root {
+    --bg: #15181d;
+    --header-bg: #0b0e12;
+    --header-text: #ece7dc;
+    --accent: #d97742;       /* burnt orange - keeps some warmth from the brand's amber accent */
+    --accent-hover: #c8632c;
+    --card-bg: #1e2127;
+    --card-border: #33373f;
+    --text: #e6e3da;
+    --text-muted: #9a9da3;
+    --table-border: #33373f;
+    --shadow: rgba(0, 0, 0, 0.4);
+}
+
+.hero { border-bottom-color: var(--card-border); }

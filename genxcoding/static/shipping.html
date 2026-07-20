@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shipping information for GenX Coding orders.">
+<meta name="keywords" content="shipping, delivery, genx coding">
+<title>Shipping - GenX Coding</title>
+<!-- plain HTML page - no PHP - shares the site's CSS so it matches the rest of the site -->
+<link rel="icon" href="../images/favicon.png" type="image/png">
+<link rel="stylesheet" href="../css/regular.css?v=3" id="themeCss">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="page-wrapper">
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="logo"><a href="../index.php">GenX<span>Coding</span></a></div>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">&#9776;</button>
+        <nav class="main-nav" id="mainNav">
+            <ul class="nav-links">
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../products.php">Products</a></li>
+                <li><a href="../about.php">About</a></li>
+                <li><a href="../contact.php">Contact</a></li>
+                <li><a href="../wiki/help1.php">Help</a></li>
+                <li><a href="shipping.html">Shipping</a></li>
+            </ul>
+        </nav>
+        <ul class="auth-links" data-static-auth="true">
+            <li><a href="../login.php">Login</a></li>
+            <li><a href="../register.php" class="btn-nav">Register</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="site-main">
+<div class="container">
+<h1>Shipping Information</h1>
+    <table class="cart-table">
+        <tr><th>Method</th><th>Cost</th><th>Estimated Time</th></tr>
+        <tr><td>Standard</td><td>$5.99</td><td>5-7 business days</td></tr>
+        <tr><td>Express</td><td>$14.99</td><td>2-3 business days</td></tr>
+        <tr><td>Free Shipping</td><td>$0 (orders over $75)</td><td>5-7 business days</td></tr>
+    </table>
+    <p>All orders are processed within 2 business days before shipping begins.</p>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-cols">
+        <div>
+            <h4>GenX Coding</h4>
+            <p>Merch for people who debug for fun.</p>
+        </div>
+        <div>
+            <h4>Shop by Category</h4>
+            <a href="../category.php?id=1">Keyboards &amp; Mice</a><br>
+            <a href="../category.php?id=2">Clothing</a><br>
+            <a href="../category.php?id=3">Drinkware</a><br>
+            <a href="../category.php?id=4">Desk Accessories</a><br>
+            <a href="../category.php?id=5">Stickers &amp; Decor</a><br>
+            <a href="../category.php?id=6">Bags &amp; Comfort</a>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <a href="../about.php">About</a><br>
+            <a href="../contact.php">Contact</a><br>
+            <a href="shipping.html">Shipping</a><br>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div>
+            <h4>Support</h4>
+            <a href="../wiki/help1.php">Help Wiki</a><br>
+            <a href="faq.html">FAQ</a><br>
+            <a href="sizing-guide.html">Sizing Guide</a><br>
+            <a href="care-guide.html">Care Guide</a>
+        </div>
+        <div id="newsletter">
+            <h4>Stay Updated</h4>
+            <p>Get new arrivals and sale alerts.</p>
+            <form method="post" action="../newsletter.php" class="newsletter-form">
+                <input type="hidden" name="came_from" value="static/shipping.html">
+                <input type="email" name="email" placeholder="Your email" required>
+                <button type="submit" class="btn">Join</button>
+            </form>
+        </div>
+    </div>
+    <p class="copyright">&copy; 2026 GenX Coding. All rights reserved.</p>
+</footer>
+
+</div><!-- /.page-wrapper -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="../js/main.js?v=3"></script>
+</body>
+</html>
