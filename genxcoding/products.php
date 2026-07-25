@@ -53,7 +53,7 @@ $all_categories = mysqli_query($conn, "SELECT * FROM categories ORDER BY name");
     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
         <div class="product-card">
             <div class="product-img-wrap">
-                <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
+                <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>" title="Image generated with Google Gemini">
                 <?php if (is_on_sale($row)) { ?><span class="sale-badge">Sale</span><?php } ?>
             </div>
             <h3><?php echo $row['name']; ?></h3>

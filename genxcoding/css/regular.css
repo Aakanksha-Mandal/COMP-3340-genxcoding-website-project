@@ -214,6 +214,7 @@ a  { color: var(--accent-hover); }
     justify-content: center;
     padding: var(--space-xl) var(--space-lg);
     color: var(--header-text);
+    position: relative;
     /* the old hero illustration, used as a background now that the video
        took over the right-hand panel. The gradient overlay sits between the
        image and the text so the copy stays fully legible regardless of how
@@ -236,6 +237,7 @@ a  { color: var(--accent-hover); }
 .hero-image {
     flex: 1 1 380px;
     min-width: 280px;
+    position: relative;
 }
 .hero-image img, .hero-image video {
     width: 100%;
@@ -290,6 +292,35 @@ a  { color: var(--accent-hover); }
     border: 1px solid var(--card-border);
     display: block;
     margin-top: 8px;
+}
+
+/* small "credit" badge shown on hover over AI-generated media - works for
+   both <img>/<video> "title" attributes (native browser tooltip, a nice
+   fallback) and CSS background-images (like the hero-content illustration),
+   which have no native hover-tooltip mechanism at all - this badge is what
+   makes those show a credit too. */
+.media-credit-wrap {
+    position: relative;
+    margin-top: 8px;
+}
+.media-credit-wrap video { margin-top: 0; }
+.media-credit-badge {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(27, 42, 65, 0.85);
+    color: #f2efe9;
+    font-size: 11px;
+    padding: 4px 9px;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+.media-credit-wrap:hover .media-credit-badge,
+.hero-image:hover .media-credit-badge,
+.hero-content:hover .media-credit-badge {
+    opacity: 1;
 }
 
 /* PRODUCT GRID */
@@ -523,6 +554,12 @@ table.cart-table th { background-color: var(--card-border); font-family: 'JetBra
     color: var(--text-muted);
     border-top: 1px solid rgba(255,255,255,0.08);
     padding-top: var(--space-sm);
+}
+.media-credit {
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 6px;
 }
 
 .error {

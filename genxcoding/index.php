@@ -25,14 +25,16 @@ $result = mysqli_query($conn, $sql);
         <h1>Gear made for people who code.</h1>
         <p>Keyboards, hoodies, mugs, stickers - everything a developer actually wants.</p>
         <a href="products.php" class="btn">Shop Now</a>
+        <span class="media-credit-badge">Image: Google Gemini</span>
     </div>
     <div class="hero-image">
         <!-- looping background video showing the desk setup aesthetic -
              autoplay only works cross-browser when muted, and playsinline
              stops iOS from forcing it into fullscreen -->
-        <video autoplay muted loop playsinline poster="images/hero-banner.png" aria-label="Looping video of a coding desk setup">
+        <video autoplay muted loop playsinline poster="images/hero-banner.png" aria-label="Looping video of a coding desk setup" title="Video created with Meta AI Vibes">
             <source src="videos/desk-banner.mp4" type="video/mp4">
         </video>
+        <span class="media-credit-badge">Video: Meta AI Vibes</span>
     </div>
 </section>
 
@@ -42,7 +44,7 @@ $result = mysqli_query($conn, $sql);
         <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <div class="product-card">
                 <div class="product-img-wrap">
-                    <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>">
+                    <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['name']; ?>" title="Image generated with Google Gemini">
                     <?php if (is_on_sale($row)) { ?><span class="sale-badge">Sale</span><?php } ?>
                 </div>
                 <h3><?php echo $row['name']; ?></h3>

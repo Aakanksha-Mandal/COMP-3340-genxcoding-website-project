@@ -50,6 +50,7 @@ $footer_categories = mysqli_query($conn, "SELECT * FROM categories ORDER BY name
         </div>
     </div>
     <p class="copyright">&copy; 2026 GenX Coding. All rights reserved.</p>
+    <p class="media-credit">Product images generated with Google Gemini. Videos created with Meta AI Vibes.</p>
 </footer>
 
 </div><!-- /.page-wrapper -->

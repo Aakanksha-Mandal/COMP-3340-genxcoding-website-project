@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_review'])) {
 
 <div class="product-detail">
     <div class="product-img-wrap" style="max-width:360px;">
-        <img src="images/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>">
+        <img src="images/<?php echo $product['image']; ?>" alt="<?php echo $product['name']; ?>" title="Image generated with Google Gemini">
         <?php if (is_on_sale($product)) { ?><span class="sale-badge">Sale</span><?php } ?>
     </div>
     <div class="product-info">

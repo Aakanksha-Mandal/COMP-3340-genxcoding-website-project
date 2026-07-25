@@ -28,18 +28,24 @@ your home office or looking for a gift for the developer in your life, we've got
     <div class="video-card">
         <h3>Gear Made For People Who Code</h3>
         <p>A short look at what we're about - the desk setups, the late-night debugging sessions, and the gear that makes it a little more fun.</p>
-        <video autoplay muted loop playsinline width="100%" aria-label="Short brand video showing our desk setups and coding sessions">
-            <source src="videos/brand-story.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="media-credit-wrap">
+            <video autoplay muted loop playsinline width="100%" aria-label="Short brand video showing our desk setups and coding sessions" title="Video created with Meta AI Vibes">
+                <source src="videos/brand-story.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="media-credit-badge">Video: Meta AI Vibes</span>
+        </div>
     </div>
     <div class="video-card">
         <h3>Product Highlights</h3>
         <p>A closer look at some of our most-loved pieces - from the Tab Key keyboard to the console.log(hi) tee.</p>
-        <video autoplay muted loop playsinline width="100%" aria-label="Short video highlighting a few featured products">
-            <source src="videos/product-highlights.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <div class="media-credit-wrap">
+            <video autoplay muted loop playsinline width="100%" aria-label="Short video highlighting a few featured products" title="Video created with Meta AI Vibes">
+                <source src="videos/product-highlights.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="media-credit-badge">Video: Meta AI Vibes</span>
+        </div>
     </div>
 </div>
 </div>
